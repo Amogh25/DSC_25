@@ -1,0 +1,27 @@
+message = ""
+print("Type help for more details")
+started = False
+while True:
+    message = input('>').lower()
+    if message == 'start':
+        if started:
+            print("car has already started!")
+        else :
+            print('car started....')
+            started = True
+    elif message == "stop":
+        if not started:
+            print("car has already stopped!")
+        else:
+            print('car has stopped')
+            started = False
+    elif message == "help":
+        print(""" Type
+        start - to start the car
+        stop - to stop the car
+        quit - to end the game""")
+    elif message == "quit":
+        break
+    else:
+        print('Oops! Invalid command. Type help to display commands')
+print('Game over')
